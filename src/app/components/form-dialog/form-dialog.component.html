@@ -1,1 +1,8 @@
-<p>form-dialog works!</p>
+<button mat-raised-button color="primary" (click)="abrirDialogo()">Abrir Formulario</button>
+
+<div *ngIf="datos">
+  <h3>Datos Ingresados</h3>
+  <p><strong>Nombre:</strong> {{ datos.nombre }}</p>
+  <p><strong>Email:</strong> {{ datos.email }}</p>
+  <p><strong>Dirección:</strong> {{ datos.direccion }}</p>
+</div>
