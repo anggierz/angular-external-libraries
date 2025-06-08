@@ -1,27 +1,47 @@
-# AngularExternalLibraries
+# Angular External Libraries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+Este proyecto es parte de un ejercicio práctico de la asignatura **Desarrollo Front con Frameworks II** en la Universidad Europea.
 
-## Development server
+## 📚 Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La aplicación demuestra el uso de **librerías externas en Angular**, específicamente:
 
-## Code scaffolding
+- **Angular Material**: para crear una interfaz con diálogo modal y formulario.
+- **ngx-charts**: para representar datos mediante gráficos (líneas y barras).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🧩 Componentes principales
 
-## Build
+### 1. `FormDialogComponent`
+- Botón que abre un `MatDialog`.
+- El diálogo contiene un formulario con los campos:
+  - Nombre
+  - Email
+  - Dirección
+- Al enviar el formulario, los datos se muestran en el HTML del componente principal.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 2. `DialogFormComponent`
+- Contenido del diálogo.
+- Usa `FormsModule` y `ngModel` para enlazar los campos del formulario.
 
-## Running unit tests
+### 3. `ChartsComponent`
+- Contiene dos gráficos:
+  - Gráfico de líneas (ventas por mes).
+  - Gráfico de barras (ventas por producto).
+- Implementado con `@swimlane/ngx-charts`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ⚙️ Instalación
 
-## Running end-to-end tests
+1. Clona el repositorio
+```bash
+git clone https://github.com/anggierz/angular-external-libraries.git
+cd angular-external-libraries
+```
+2. Instala las dependencias
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Ejecuta el servidor
+```bash
+ng serve
+```
